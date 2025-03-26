@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Ayllón Jaime | Desarrollador</title>
-    <!-- Fuente similar a Apple/LinkedIn -->
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -13,17 +11,15 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'SF Pro Display', Arial, sans-serif;
             color: #1d1d1f;
             background-color: #f5f5f7;
             line-height: 1.6;
         }
-
         /* Header */
         header {
-            background-color: #fff;
+            background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
             padding: 1.5rem 2rem;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -31,46 +27,39 @@
             top: 0;
             z-index: 10;
         }
-
         header h1 {
             font-size: 2.5rem;
             font-weight: 600;
             color: #1d1d1f;
         }
-
         header .pronouns {
             font-size: 1.1rem;
             color: #6e6e73;
             margin-top: 0.2rem;
         }
-
         header p {
             font-size: 1.2rem;
             color: #6e6e73;
             margin-top: 0.5rem;
         }
-
         /* Hero Section */
         .hero {
             padding: 6rem 2rem;
             text-align: center;
-            background: url('/Mars_Surface.jpg') no-repeat center/cover;
+            background: linear-gradient(135deg, #ff8c00 0%, #1c2526 100%); /* Naranja Marte a oscuro */
             color: #fff;
         }
-
         .hero h2 {
             font-size: 3.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-
         .hero p {
             font-size: 1.5rem;
             max-width: 700px;
             margin: 0 auto;
         }
-
         .hero .btn {
             display: inline-block;
             background-color: #0071e3;
@@ -82,59 +71,55 @@
             margin-top: 2rem;
             transition: background-color 0.3s;
         }
-
         .hero .btn:hover {
             background-color: #005bb5;
         }
-
         /* About Section */
         .about {
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
         }
-
         .about h3 {
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
             color: #1d1d1f;
         }
-
         .about p {
             font-size: 1.2rem;
             color: #6e6e73;
             max-width: 800px;
             margin: 0 auto;
         }
-
-        .about img {
+        .about .mars-icon {
+            display: inline-block;
             width: 60px;
             height: 60px;
+            background: radial-gradient(circle, #ff8c00 20%, transparent 70%);
+            border-radius: 50%;
             margin-top: 2rem;
         }
-
         /* Projects Section */
         .content {
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            background: linear-gradient(180deg, #f5f5f7 0%, #e0e0e0 100%);
         }
-
         .content h3 {
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 2rem;
             color: #1d1d1f;
         }
-
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .project-card {
             background: #fff;
             padding: 2rem;
@@ -142,51 +127,45 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-
         .project-card:hover {
             transform: translateY(-5px);
         }
-
         .project-card h4 {
             font-size: 1.5rem;
             font-weight: 600;
             color: #1d1d1f;
             margin-bottom: 1rem;
         }
-
         .project-card p {
             font-size: 1rem;
             color: #6e6e73;
         }
-
-        .project-card img {
+        .project-card .icon {
             width: 40px;
             height: 40px;
+            background: linear-gradient(45deg, #ff8c00, #ffbc80);
+            border-radius: 50%;
             margin-bottom: 1rem;
         }
-
         /* Footer */
         footer {
             padding: 2rem;
-            background-color: #f5f5f7;
+            background: linear-gradient(180deg, #e0e0e0 0%, #f5f5f7 100%);
             text-align: center;
             font-size: 0.9rem;
             color: #6e6e73;
         }
-
         footer a {
             color: #0071e3;
             text-decoration: none;
             margin: 0 10px;
             transition: color 0.3s;
         }
-
         footer a:hover {
             color: #005bb5;
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1>Marc Ayllón Jaime</h1>
@@ -202,28 +181,25 @@
 
     <section class="about">
         <h3>About</h3>
-        <p>I am an eager learner with a passion for exploring new subjects and experiences. My professional journey has
-            been diverse, covering various roles in IT, construction, and volunteer work. This has equipped me with a
-            broad skill set and the ability to adapt to different environments. I thrive on challenges and continually
-            seek opportunities to expand my knowledge and capabilities.</p>
-        <img src="https://via.placeholder.com/60x60?text=🟠" alt="Ícono Marte Naranja">
+        <p>I am an eager learner with a passion for exploring new subjects and experiences. My professional journey has been diverse, covering various roles in IT, construction, and volunteer work. This has equipped me with a broad skill set and the ability to adapt to different environments. I thrive on challenges and continually seek opportunities to expand my knowledge and capabilities.</p>
+        <div class="mars-icon"></div>
     </section>
 
     <section class="content">
         <h3>Mis Proyectos</h3>
         <div class="projects">
             <div class="project-card">
-                <img src="https://via.placeholder.com/40x40?text=🚀" alt="Ícono Marte">
+                <div class="icon"></div>
                 <h4>Proyecto 1</h4>
                 <p>Un proyecto épico que combina [descripción breve].</p>
             </div>
             <div class="project-card">
-                <img src="https://via.placeholder.com/40x40?text=🪐" alt="Ícono Planeta">
+                <div class="icon"></div>
                 <h4>Proyecto 2</h4>
                 <p>Explorando [tema] con un enfoque único.</p>
             </div>
             <div class="project-card">
-                <img src="https://via.placeholder.com/40x40?text=🌌" alt="Ícono Espacio">
+                <div class="icon"></div>
                 <h4>Proyecto 3</h4>
                 <p>Construyendo el futuro con [tecnología].</p>
             </div>
@@ -231,11 +207,10 @@
     </section>
 
     <footer>
-        <p>© 2025 Marc Ayllón Jaime |
-            <a href="https://github.com/markjustfront" target="_blank">GitHub</a> |
+        <p>© 2025 Marc Ayllón Jaime | 
+            <a href="https://github.com/markjustfront" target="_blank">GitHub</a> | 
             <a href="https://www.linkedin.com/in/marcayllonjaime" target="_blank">LinkedIn</a>
         </p>
     </footer>
 </body>
-
 </html>
