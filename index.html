@@ -10,9 +10,9 @@
 <body>
     <header>
         <div class="container">
-            <h1>Marc Ayllón Jaime</h1>
-            <p>Emerging Technologies | Network & Systems Enthusiast</p>
-            <div class="social-links">
+            <h1 class="fade-in">Marc Ayllón Jaime</h1>
+            <p class="fade-in">Emerging Technologies | Network & Systems Enthusiast</p>
+            <div class="social-links fade-in">
                 <a href="https://www.linkedin.com/in/marcayllonjaime/" target="_blank" class="social-btn">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
@@ -25,8 +25,8 @@
 
     <section class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>
+            <h2 class="slide-in">About Me</h2>
+            <p class="fade-in">
                 I am an eager learner with a passion for exploring new subjects and experiences. My professional journey spans IT, construction, and volunteer work, equipping me with a broad skill set and adaptability. I thrive on challenges and am always seeking opportunities to expand my knowledge and capabilities.
             </p>
         </div>
@@ -34,18 +34,18 @@
 
     <section class="experience">
         <div class="container">
-            <h2>Experience</h2>
-            <div class="job">
+            <h2 class="slide-in">Experience</h2>
+            <div class="job fade-in">
                 <h3>ERASMUS Mobility Internship | Miha Borec.s.p</h3>
                 <p><em>Jun 2024 - Jul 2024 | Maribor, Slovenia</em></p>
                 <p>Developed and corrected websites using WordPress, enhancing user experience and performance through coding and troubleshooting.</p>
             </div>
-            <div class="job">
+            <div class="job fade-in">
                 <h3>IT Technician | Magda Prats Informàtica SL</h3>
                 <p><em>Jun 2023 - Sep 2023 | Torroella, Spain</em></p>
                 <p>Provided technical support, assembled PCs, diagnosed systems, and repaired hardware/software issues.</p>
             </div>
-            <div class="job">
+            <div class="job fade-in">
                 <h3>Drywall Installer | Tabiplac Aïllaments S.L.</h3>
                 <p><em>May 2021 - Aug 2021 | Torroella de Montgrí, Spain</em></p>
                 <p>Contributed to project completion with precision and teamwork in a dynamic environment.</p>
@@ -55,13 +55,13 @@
 
     <section class="education">
         <div class="container">
-            <h2>Education</h2>
-            <div class="edu">
+            <h2 class="slide-in">Education</h2>
+            <div class="edu fade-in">
                 <h3>Web Application Development | Institut Cendrassos</h3>
                 <p><em>Sep 2023 - Present</em></p>
                 <p>Currently mastering programming languages (Java), database management, and markup languages.</p>
             </div>
-            <div class="edu">
+            <div class="edu fade-in">
                 <h3>Microcomputer Systems and Networks | Institut Cendrassos</h3>
                 <p><em>Sep 2021 - May 2023</em></p>
                 <p>Gained expertise in PC assembly, network operations, and system administration.</p>
@@ -69,24 +69,65 @@
         </div>
     </section>
 
+    <section class="projects">
+        <div class="container">
+            <h2 class="slide-in">GitHub Projects</h2>
+            <div class="project-grid">
+                <div class="project-card fade-in">
+                    <h3>Project 1</h3>
+                    <p>A cool project I built with Java and WordPress.</p>
+                    <a href="https://github.com/your-github-username/project1" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Project 2</h3>
+                    <p>An e-commerce site for refurbished tech.</p>
+                    <a href="https://github.com/your-github-username/project2" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Project 3</h3>
+                    <p>A network diagnostics tool.</p>
+                    <a href="https://github.com/your-github-username/project3" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="skills">
         <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>WordPress Design</li>
-                <li>Quality Control</li>
-                <li>Technical Support</li>
-                <li>System Diagnostics & Repair</li>
-                <li>Attention to Detail</li>
-                <li>Java (Learning)</li>
+            <h2 class="slide-in">Skills</h2>
+            <ul class="skill-list">
+                <li class="fade-in">WordPress Design</li>
+                <li class="fade-in">Quality Control</li>
+                <li class="fade-in">Technical Support</li>
+                <li class="fade-in">System Diagnostics & Repair</li>
+                <li class="fade-in">Attention to Detail</li>
+                <li class="fade-in">Java (Learning)</li>
             </ul>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Marc Ayllón Jaime. All rights reserved.</p>
+            <p class="fade-in">© 2025 Marc Ayllón Jaime. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        fetch('https://api.github.com/users/markjustfront/repos')
+            .then(response => response.json())
+            .then(data => {
+                const projectGrid = document.querySelector('.project-grid');
+                projectGrid.innerHTML = '';
+                data.slice(0, 3).forEach(repo => {
+                    const card = `
+                        <div class="project-card fade-in">
+                            <h3>${repo.name}</h3>
+                            <p>${repo.description || 'No description available'}</p>
+                            <a href="${repo.html_url}" target="_blank" class="project-link">View on GitHub</a>
+                        </div>`;
+                    projectGrid.innerHTML += card;
+                });
+            });
+    </script>
 </body>
 </html>
