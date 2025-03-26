@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #1e90ff;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #1e90ff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.social-btn:hover {
+    background: #ddd;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+section h2 {
+    color: #1e90ff;
+    border-bottom: 2px solid #1e90ff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about, .skills {
+    background: #fff;
+}
+
+.experience, .education {
+    background: #f9f9f9;
+}
+
+.job, .edu {
+    margin: 1rem 0;
+}
+
+.job h3, .edu h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.job p, .edu p {
+    margin: 0.3rem 0;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    background: #1e90ff;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

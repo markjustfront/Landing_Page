@@ -1,224 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marc Ayllón Jaime</title>
-    <!-- Fuentes elegantes y artísticas -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #e0e0e0;
-            background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-        /* Header */
-        header {
-            background: linear-gradient(90deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.9));
-            padding: 2rem 3rem;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 10;
-            backdrop-filter: blur(5px);
-        }
-        header h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
-        }
-        header .pronouns {
-            font-size: 1rem;
-            color: #b0b0b0;
-            margin-top: 0.3rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #ff8c00; /* Naranja sutil para Marte */
-            margin-top: 0.5rem;
-            font-style: italic;
-        }
-        /* Main Section */
-        .main {
-            padding: 10rem 3rem 6rem;
-            text-align: center;
-            min-height: 100vh;
-            background: radial-gradient(circle at center, #2a2a2a 0%, #0d0d0d 80%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .main h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
-        }
-        .main p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            color: #c0c0c0;
-        }
-        .main .btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff8c00, #ffffff);
-            color: #0d0d0d;
-            padding: 1rem 3rem;
-            text-decoration: none;
-            font-size: 1.2rem;
-            border-radius: 0;
-            border: 1px solid #ff8c00;
-            transition: all 0.3s ease;
-        }
-        .main .btn:hover {
-            background: linear-gradient(45deg, #ffffff, #ff8c00);
-            color: #0d0d0d;
-            box-shadow: 0 0 20px rgba(255, 140, 0, 0.7);
-        }
-        /* About Section */
-        .about {
-            padding: 6rem 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-        }
-        .about h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ff8c00;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
-        }
-        .about p {
-            font-size: 1.2rem;
-            color: #b0b0b0;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        /* Projects Section */
-        .projects-section {
-            padding: 6rem 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: linear-gradient(180deg, #252525 0%, #1a1a1a 100%);
-        }
-        .projects-section h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ff8c00;
-            text-align: center;
-            margin-bottom: 3rem;
-            text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
-        }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-        }
-        .project-card {
-            background: rgba(40, 40, 40, 0.8);
-            padding: 2rem;
-            border: 1px solid #ff8c00;
-            border-radius: 0;
-            transition: all 0.3s ease;
-        }
-        .project-card:hover {
-            background: rgba(50, 50, 50, 0.9);
-            box-shadow: 0 0 25px rgba(255, 140, 0, 0.5);
-            transform: translateY(-5px);
-        }
-        .project-card h4 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-        }
-        .project-card p {
-            font-size: 1rem;
-            color: #a0a0a0;
-        }
-        /* Footer */
-        footer {
-            padding: 4rem 3rem;
-            text-align: center;
-            background: linear-gradient(90deg, #1a1a1a 0%, #0d0d0d 100%);
-        }
-        footer p {
-            font-size: 0.9rem;
-            color: #b0b0b0;
-        }
-        footer a {
-            color: #ff8c00;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: all 0.3s ease;
-        }
-        footer a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
-        }
-    </style>
+    <title>Marc Ayllón Jaime | Emerging Tech Enthusiast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Marc Ayllón Jaime</h1>
-        <div class="pronouns">(He/Him)</div>
-        <p>Emerging Technologies | Network & Systems Enthusiast</p>
+        <div class="container">
+            <h1>Marc Ayllón Jaime</h1>
+            <p>Emerging Technologies | Network & Systems Enthusiast</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/marcayllonjaime/" target="_blank" class="social-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/your-github-username" target="_blank" class="social-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
     </header>
 
-    <section class="main">
-        <h2>The Code Artisan</h2>
-        <p>Exploro el universo del código con una pasión por la innovación y la precisión, forjando soluciones que trascienden lo ordinario.</p>
-        <a href="https://github.com/markjustfront" class="btn" target="_blank">Descubre mi GitHub</a>
-    </section>
-
     <section class="about">
-        <h3>About</h3>
-        <p>I am an eager learner with a passion for exploring new subjects and experiences. My professional journey has been diverse, covering various roles in IT, construction, and volunteer work. This has equipped me with a broad skill set and the ability to adapt to different environments. I thrive on challenges and continually seek opportunities to expand my knowledge and capabilities.</p>
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I am an eager learner with a passion for exploring new subjects and experiences. My professional journey spans IT, construction, and volunteer work, equipping me with a broad skill set and adaptability. I thrive on challenges and am always seeking opportunities to expand my knowledge and capabilities.
+            </p>
+        </div>
     </section>
 
-    <section class="projects-section">
-        <h3>Mis Proyectos</h3>
-        <div class="projects">
-            <div class="project-card">
-                <h4>Proyecto 1</h4>
-                <p>Un proyecto épico que combina [descripción breve].</p>
+    <section class="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>ERASMUS Mobility Internship | Miha Borec.s.p</h3>
+                <p><em>Jun 2024 - Jul 2024 | Maribor, Slovenia</em></p>
+                <p>Developed and corrected websites using WordPress, enhancing user experience and performance through coding and troubleshooting.</p>
             </div>
-            <div class="project-card">
-                <h4>Proyecto 2</h4>
-                <p>Explorando [tema] con un enfoque único.</p>
+            <div class="job">
+                <h3>IT Technician | Magda Prats Informàtica SL</h3>
+                <p><em>Jun 2023 - Sep 2023 | Torroella, Spain</em></p>
+                <p>Provided technical support, assembled PCs, diagnosed systems, and repaired hardware/software issues.</p>
             </div>
-            <div class="project-card">
-                <h4>Proyecto 3</h4>
-                <p>Construyendo el futuro con [tecnología].</p>
+            <div class="job">
+                <h3>Drywall Installer | Tabiplac Aïllaments S.L.</h3>
+                <p><em>May 2021 - Aug 2021 | Torroella de Montgrí, Spain</em></p>
+                <p>Contributed to project completion with precision and teamwork in a dynamic environment.</p>
             </div>
         </div>
     </section>
 
+    <section class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="edu">
+                <h3>Web Application Development | Institut Cendrassos</h3>
+                <p><em>Sep 2023 - Present</em></p>
+                <p>Currently mastering programming languages (Java), database management, and markup languages.</p>
+            </div>
+            <div class="edu">
+                <h3>Microcomputer Systems and Networks | Institut Cendrassos</h3>
+                <p><em>Sep 2021 - May 2023</em></p>
+                <p>Gained expertise in PC assembly, network operations, and system administration.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>WordPress Design</li>
+                <li>Quality Control</li>
+                <li>Technical Support</li>
+                <li>System Diagnostics & Repair</li>
+                <li>Attention to Detail</li>
+                <li>Java (Learning)</li>
+            </ul>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2025 Marc Ayllón Jaime | 
-            <a href="https://github.com/markjustfront" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/marcayllonjaime" target="_blank">LinkedIn</a>
-        </p>
+        <div class="container">
+            <p>&copy; 2025 Marc Ayllón Jaime. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
